@@ -1,4 +1,4 @@
 venv_inference/
 predictions.log
 roboflow.txt
-
+.env
