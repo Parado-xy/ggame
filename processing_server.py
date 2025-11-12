@@ -200,7 +200,7 @@ def my_sink(result, video_frame):
 # ----------------------------------------------------------------------
 
 pipeline = InferencePipeline.init_with_workflow(
-    api_key = "zOAJGrMB2b3ymppyoFQE",
+    api_key = "*******", # INSERT YOUR OWN KEY
     workspace_name = "ggame-basket-ball",
     workflow_id = "detect-count-and-visualize-3",
     video_reference = "/home/ojalla/dev/ggame/videos/VIDEO-2.mp4", 
