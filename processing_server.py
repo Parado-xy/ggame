@@ -13,7 +13,7 @@ from collections import deque
 # ----------------------------------------------------------------------
 
 OUTPUT_VIDEO_PATH = os.path.join(os.path.dirname(__file__), "output_video.mp4")
-INPUT_VIDEO_PATH = os.path.join(os.path.dirname(__file__), "..", "videos", "VIDEO-2.mp4")
+INPUT_VIDEO_PATH = os.path.join(os.path.dirname(__file__), "videos/VIDEO-2.mp4")
 SHOW_LIVE_PREVIEW = False  # Set to True to display video while processing
 USE_ASYNC_WRITER = True  # Write frames in a separate thread
 
