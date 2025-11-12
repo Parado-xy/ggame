@@ -13,6 +13,7 @@ from collections import deque
 # ----------------------------------------------------------------------
 
 OUTPUT_VIDEO_PATH = os.path.join(os.path.dirname(__file__), "output_video.mp4")
+INPUT_VIDEO_PATH = os.path.join(os.path.dirname(__file__), "..", "videos", "VIDEO-2.mp4")
 SHOW_LIVE_PREVIEW = False  # Set to True to display video while processing
 USE_ASYNC_WRITER = True  # Write frames in a separate thread
 
@@ -200,10 +201,10 @@ def my_sink(result, video_frame):
 # ----------------------------------------------------------------------
 
 pipeline = InferencePipeline.init_with_workflow(
-    api_key = "*******", # INSERT YOUR OWN KEY
-    workspace_name = "ggame-basket-ball",
+    api_key = os.getenv("API_KEY"),
+    workspace_name = "ggai",
     workflow_id = "detect-count-and-visualize-3",
-    video_reference = "/home/ojalla/dev/ggame/videos/VIDEO-2.mp4", 
+    video_reference = INPUT_VIDEO_PATH, 
     max_fps = 30,  # Try lowering this if still slow (e.g., 15)
     on_prediction = my_sink
 )
