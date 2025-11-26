@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./.env:/app/.env
+      - ./uploads:/app/uploads
+      - ./processed:/app/processed
+    environment:
+      - PYTHONUNBUFFERED=1

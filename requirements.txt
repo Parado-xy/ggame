@@ -137,3 +137,6 @@ wait_for2==0.3.2
 yarl==1.22.0
 zeep==4.3.2
 zxing-cpp==2.2.0
+fastapi
+uvicorn
+python-multipart
