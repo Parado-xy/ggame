@@ -1,6 +1,5 @@
 import requests
 import os
-import sys
 
 def test_process_video():
     url = "http://localhost:8000/process-video"
