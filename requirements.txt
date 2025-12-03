@@ -47,7 +47,7 @@ humanfriendly==10.0
 idna==3.11
 ifaddr==0.2.0
 imageio==2.37.0
-inference==0.58.2
+inference>=0.62.2
 iniconfig==2.3.0
 isodate==0.7.2
 jiter==0.11.1

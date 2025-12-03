@@ -23,5 +23,21 @@ RUN mkdir -p uploads processed
 # Expose port
 EXPOSE 8000
 
+# Suppress inference warnings for unused models
+ENV CORE_MODEL_GAZE_ENABLED=False \
+    SMOLVLM2_ENABLED=False \
+    PALIGEMMA_ENABLED=False \
+    FLORENCE2_ENABLED=False \
+    QWEN_2_5_ENABLED=False \
+    CORE_MODEL_SAM_ENABLED=False \
+    CORE_MODEL_SAM2_ENABLED=False \
+    CORE_MODEL_CLIP_ENABLED=False \
+    DEPTH_ESTIMATION_ENABLED=False \
+    MOONDREAM2_ENABLED=False \
+    CORE_MODEL_TROCR_ENABLED=False \
+    CORE_MODEL_GROUNDINGDINO_ENABLED=False \
+    CORE_MODEL_YOLO_WORLD_ENABLED=False \
+    CORE_MODEL_PE_ENABLED=False
+
 # Command to run the application
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
